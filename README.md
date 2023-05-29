@@ -1,26 +1,70 @@
 # Python_Bank_Clone
-The code we provided is an implementation of a banking system using Python. It presents a menu-driven interface where users can choose various banking operations. Here's a brief description of each section of the code:
+The code you provided is an implementation of a banking system using Python. It consists of a menu-driven interface that allows users to perform various banking operations. Let's break down the code and provide a description of its functionality:
 
-1. The code imports two modules, `mymodule` and `Functions`, which contain the necessary functions and classes for the banking operations.
+1. The code begins by importing two modules, `mymodule` and `Functions`. These modules contain the necessary functions and classes to perform the banking operations.
 
-2. The code then enters a loop that will display the bank's menu options and prompt the user to choose an operation.
+2. A loop is initiated, running for 100 Users in a day, which serves as the main interface for the banking system.
 
-3. If the user chooses option 1, it prompts for a customer ID and calls the `to_open_account` function from the `Functions` module to open a new bank account. It also creates an instance of the `Bank` class from the `mymodule` module and displays the account details.
+3. Within each iteration of the loop, a menu is displayed to the user, presenting several banking options.
 
-4. If the user chooses option 2, it prompts for a customer ID and checks if the customer exists using the `check_customer` function from the `mymodule` module. If the customer exists, it calls the `debit_card` function from the `Functions` module to apply for a debit card.
+4. The user is prompted to enter a choice from the menu. The code attempts to convert the input into an integer. If the conversion fails, an error message is displayed, requesting the user to enter an integer.
 
-5. If the user chooses option 3, it prompts for a customer ID and checks if the customer exists. If the customer exists, it creates an instance of the `BankAtm` class from the `mymodule` module and calls the `Atm_machine` method to simulate an ATM machine.
+5. Depending on the user's choice, the code branches into different sections, each corresponding to a specific banking operation.
 
-6. If the user chooses option 4, it prompts for a customer ID and checks if the customer exists. If the customer exists, it prompts for an amount and calls the `deposite_balance` method of the `BankAtm` class to deposit the specified amount.
+6. Option 1: New Bank Account for Open
+   - The user is prompted to enter a customer ID.
+   - The code attempts to convert the input into an integer.
+   - If successful, the `to_open_account` function from the `Functions` module is called, passing the customer ID as an argument.
+   - The result of the function call is printed, and an instance of the `Bank` class from the `mymodule` module is created using the customer ID.
+   - The `display` method of the `Bank` class is called to show the account details.
 
-7. If the user chooses option 5, it prompts for a customer ID and checks if the customer exists. If the customer exists, it calls the `update_customer` function from the `Functions` module to update the customer's details.
+7. Option 2: Apply for a Debit Card
+   - The user is prompted to enter a customer ID.
+   - The code attempts to convert the input into an integer.
+   - If successful, the `check_customer` function from the `mymodule` module is called to check if the customer exists.
+   - If the customer exists, the `debit_card` function from the `Functions` module is called to apply for a debit card.
+   - A success message is displayed if the application is successful. Otherwise, a message indicating that the customer was not found is shown.
 
-8. If the user chooses option 6, it prompts for a customer ID and checks if the customer exists. If the customer exists, it creates an instance of the `BankAtm` class and calls the `display` method to show the customer's details.
+8. Option 3: ATM Machine
+   - The user is prompted to enter a customer ID.
+   - The code attempts to convert the input into an integer.
+   - If successful, the `check_customer` function from the `mymodule` module is called to check if the customer exists.
+   - If the customer exists, an instance of the `BankAtm` class from the `mymodule` module is created using the customer ID.
+   - The `Atm_machine` method of the `BankAtm` class is called to simulate the ATM machine's functionality.
 
-9. If the user chooses option 7, it prompts for a customer ID and checks if the customer exists. If the customer exists, it creates an instance of the `BankAtm` class and retrieves the customer's information. It then prints the customer's name, account number, balance, and ATM pin.
+9. Option 4: Deposit Balance
+   - The user is prompted to enter a customer ID.
+   - The code attempts to convert the input into an integer.
+   - If successful, the `check_customer` function from the `mymodule` module is called to check if the customer exists.
+   - If the customer exists, the user is prompted to enter an amount to deposit.
+   - The `BankAtm` class is instantiated using the customer ID.
+   - The `deposite_balance` method of the `BankAtm` class is called to deposit the specified amount.
 
-10. If the user chooses option 8, the program exits.
+10. Option 5: Update Customer Details
+    - The user is prompted to enter a customer ID.
+    - The code attempts to convert the input into an integer.
+    - If successful, the `check_customer` function from the `mymodule` module is called to check if the customer exists.
+    - If the customer exists, the `update_customer` function from the `Functions` module is called to update the customer's details.
 
-11. If the user enters an invalid option, it displays an error message.
 
-The code appears to be a basic implementation of a banking system, but without the actual implementations of the functions and classes in the `mymodule` and `Functions` modules, it is difficult to provide further details about the functionality and behavior of the code.
+
+11. Option 6: Show Customer Details
+    - The user is prompted to enter a customer ID.
+    - The code attempts to convert the input into an integer.
+    - If successful, the `check_customer` function from the `mymodule` module is called to check if the customer exists.
+    - If the customer exists, an instance of the `BankAtm` class is created using the customer ID.
+    - The `display` method of the `BankAtm` class is called to show the customer's details.
+
+12. Option 7: Check Customer Balance and ATM Pin
+    - The user is prompted to enter a customer ID.
+    - The code attempts to convert the input into an integer.
+    - If successful, the `check_customer` function from the `mymodule` module is called to check if the customer exists.
+    - If the customer exists, an instance of the `BankAtm` class is created using the customer ID.
+    - The customer's information, including their name, account number, balance, and ATM pin, is retrieved and displayed.
+
+13. Option 8: Quit
+    - The code exits the program.
+
+14. If the user enters an invalid option, an error message is displayed.
+
+Overall, the code provides a basic banking system interface where users can perform operations such as opening accounts, applying for debit cards, using an ATM machine, depositing balance, updating customer details, and viewing customer information. However, the actual implementation and functionality of the functions and classes in the `mymodule` and `Functions` modules are not provided, so the specific details and behavior of those operations cannot be determined from the code snippet.
