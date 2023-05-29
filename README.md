@@ -1,5 +1,5 @@
 # Python_Bank_Clone
-The code you provided is an implementation of a banking system using Python. It presents a menu-driven interface where users can choose various banking operations. Here's a brief description of each section of the code:
+The code we provided is an implementation of a banking system using Python. It presents a menu-driven interface where users can choose various banking operations. Here's a brief description of each section of the code:
 
 1. The code imports two modules, `mymodule` and `Functions`, which contain the necessary functions and classes for the banking operations.
 
